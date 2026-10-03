@@ -1,25 +1,13 @@
 
-Installation information
+Information
 =======
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+In general, Minecraft will try to move items that can be used as fuel (e.g. blaze powder) FIRST into the fuel slot, and then into the ingredient slot if they match. It will then try to move ingredient items into the ingredient slots, and finally it will try to move potions (or water bottles) into the potion slots.
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
+Since Minecraft doesn't have any items that work as both an ingredient and a potion at the same time (or as both fuel and a potion, or as an item, fuel, and potion), this limits the quick-move behavior for some modded potions and items. In those cases, you have to move them manually. Ugh...!
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
+Also, isn't it a bit annoying that Minecraft moves blaze powder to the fuel slot first? For me, it is.
 
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
+Well, this simple mod allows you to select the order in which Minecraft sorts items in the brewing stand GUI when using quick move (Shift + Click), through a simple configuration file.
 
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+So, no more wasting precious seconds or milliseconds manually moving blaze powder from the fuel slot to the ingredient slot, or dealing with those rare cases where you need a potion to go into both the ingredient and potion slots.
